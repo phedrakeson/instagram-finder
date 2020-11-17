@@ -31,7 +31,10 @@ module.exports = {
     
       const { full_name, biography, profile_pic_url, edge_followed_by, edge_follow, edge_owner_to_timeline_media } = user;
     
-      const photos = edge_owner_to_timeline_media.edges;
+      const photos = edge_owner_to_timeline_media.edges.map(photo => {
+        const { shortcode, display_url } = photo.node;
+        return { shortcode, display_url }
+      });
   
       return res.json({ full_name, biography, profile_pic_url, edge_followed_by, edge_follow, photos });
     }catch(err){
