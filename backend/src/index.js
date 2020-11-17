@@ -1,10 +1,13 @@
 //Importing files
 const express = require('express');
+const cors = require('cors');
 require('dotenv/config');
 
 const controller = require('./controller');
 
 const app = express();
+
+app.use(cors());
 
 //Add router to espress
 app.get('/instagram/:username', controller.findByUserName);
