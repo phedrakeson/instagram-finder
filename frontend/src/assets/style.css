@@ -6,20 +6,23 @@
   box-sizing: border-box;
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
+  list-style: none;
 }
 
 body {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
-  background-color: #ffd8b1;
+  background-color: #aaa;
 }
 
 .container {
+  margin: 10px;
   width: 800px;
   height: 400px;
-  background-color: #e17701;
+  /* background-color: #e17701; */
 
   display: flex;
   flex-direction: column;
@@ -31,7 +34,7 @@ body {
   margin: 40px auto 0 auto;
   font-weight: 700;
   font-size: 2em;
-  color: #2e3131;
+  color: #fff;
 }
 
 .container p {
@@ -65,4 +68,76 @@ body {
 
 button {
   display: none;
+}
+
+.user_container {
+  margin: 10px;
+  width: 800px;
+  height: 400px;
+  /* background-color: #e17701; */
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.user{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.user div {
+  margin: 5px 0;
+  background: #fff;
+}
+
+.user .details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.user .details .info {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+#fullname {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.info div {
+  display: flex;
+  flex-direction: column;
+}
+
+.info div span {
+  padding: 3px;
+}
+
+.info div p{
+  width: 400px;
+}
+
+.posts {
+  height: 240px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  overflow:hidden; 
+  overflow-y:scroll;
+}
+
+.posts li a img {
+  padding: 7px;
+  width: 200px;
+  height: 200px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
 }
